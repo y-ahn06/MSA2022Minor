@@ -1,0 +1,36 @@
+list_of_number = [6, 5, 3, 8, 4, 2, 5, 11, 43, 17, 27, 99, 62, 61, 51, 47]
+
+print(list_of_number [3])
+print (len (list_of_number))
+for number in list_of_number:
+    print(number)
+
+# Print Banana
+for x in fruits:
+  print(x)
+  if x == "banana":
+    break
+
+#Don't print "Banana"
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    break
+  print(x)
+
+#Skip "Banana"
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    continue
+  print(x)
+
+#Create range
+for x in range(6):
+  print(x)
+
+#Create starting and ending range/index
+#Doesn't include 6
+for x in range(2, 6):
+  print(x)
+
