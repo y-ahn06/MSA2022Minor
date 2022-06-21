@@ -33,4 +33,12 @@ for x in range(6):
 #Doesn't include 6
 for x in range(2, 6):
   print(x)
+  
+ 
+#First parameter= starting point
+#Second parameter= ending point
+#Third parameter= count by
+for x in range(2, 30, 3):
+  print(x) 
+
 
