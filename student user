@@ -1,0 +1,31 @@
+#print the menu
+print("Select option from Menu\n---------------------")
+print("1, Login")
+print("2, Create User")
+
+#get the option the user selected
+while True:
+    user_option = input("Would you like to (1) login or (2) create account?")
+    #Ensure the user entered a valid option
+    if user_option != "1" and user_option != "2":
+        print("\nERROR: Enter a 1 or 2")
+        continue
+    else:
+        print("\nYAY! Good input")
+        break
+    # --if not, prompt user again
+
+#If user chose 1, ask for username and password
+# - validate username and password combination in the uers.txt file
+# - if not valid combination, reprompt the user
+# - if valid, then move on to prompt for student data
+#If user chose 2, ask for username and password
+# - validate username and password length. If vali, write to users.txt file
+# - and move on
+# - if not valid, reprompt user
+
+#prompt user to enter student name and number score
+#store data somewhere
+#convert the number grade to a letter grade
+
+#print student data(name, score, grade)
