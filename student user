@@ -1,4 +1,7 @@
+import math
 #print the menu
+
+
 print("Select option from Menu\n---------------------")
 print("1, Login")
 print("2, Create User")
@@ -75,24 +78,32 @@ student_grade_list = []
 student_letter_list = []
 for x in range(int(number_students)):
     student_name_list.append(input("What is the student's name: ")) 
-    student_grade = (input("What is the student's number grade: "))
-    if student_grade >= "90":
+    student_grade = (float(input("What is the student's number grade: ")))
+    if student_grade >= 90 or student_grade == 100:
         student_letter_grade = "A"
-    elif student_grade >= "80":
+    elif student_grade >= 80:
         student_letter_grade = "B"
-    elif student_grade >= "70":
+    elif student_grade >= 70:
         student_letter_grade = "C"
-    elif student_grade >= "65":
+    elif student_grade >= 60:
         student_letter_grade = "D"
-    else:
+    elif student_grade < 60:
         student_letter_grade = "F"
+    else:
+        print ("Input unaccepted. Please make sure the grade is not a negative or contain extra characters")
     student_letter_list.append(student_letter_grade)
     student_grade_list.append(student_grade)
-print (student_name_list)
-print (student_grade_list)
-print (student_letter_list)
+
+
+
 #prompt user to enter student name and number score
 #store data somewhere
 #convert the number grade to a letter grade
-
+class_total = 0
 #print student data(name, score, grade)
+for y in range(int(number_students)):
+    print (f"{student_name_list[y]}, {student_grade_list[y]}, {student_letter_list[y]}")
+    class_total = class_total + student_grade_list[y]
+class_average = class_total / float(number_students)
+print(f"The class average is {class_average}%")
+
