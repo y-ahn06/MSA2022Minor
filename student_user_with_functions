@@ -111,7 +111,9 @@ def load_student_scores_and_grades (number_of_students):
         
         #store data in the lists
         student_names.append(student_name)
-        student_scores.append(student_score)
+        scores_list.append(student_score)
+        letter_grades.append(get_letter_grade(student_score))
+    return student_names, scores_list, letter_grades
 
 def main():
     print_main_menu()
@@ -128,13 +130,10 @@ def main():
 
     print("Ask user for student data")
     #Create 3 empty list for student name, scores, letter grades
-    student_names = []
-    student_scores = []
-    student_letter_grades = []
-
+    
     #Ask user how many students to enter data for
     number_of_students = get_integer_input("Enter number of students to enter grades for: ")
-
+    student_names, student_scores, student_letter_grades = load_student_scores_and_grades(number_of_students)
     
         
         #convert the current number score to a letter grade and store in the letter grade list
